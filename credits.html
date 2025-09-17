@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Credits - Express on Vercel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Credits - Express on Vercel</title>
     <style>
         * {
             margin: 0;
@@ -14,22 +13,6 @@
         }
         
         :root {
-            --bg-color: #f5f7fa;
-            --text-color: #333;
-            --card-bg: white;
-            --header-bg: linear-gradient(135deg, #6e8efb, #a777e3);
-            --section-border: #eaeaea;
-            --item-bg: #f9fafc;
-            --item-border: #a777e3;
-            --notice-bg: #fff4e6;
-            --notice-border: #ffb300;
-            --nav-bg: #ffffff;
-            --nav-text: #555;
-            --nav-active: #6e8efb;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-        
-        .dark-mode {
             --bg-color: #1a1a2e;
             --text-color: #e6e6e6;
             --card-bg: #16213e;
@@ -37,11 +20,6 @@
             --section-border: #2d4059;
             --item-bg: #1e2a47;
             --item-border: #6e8efb;
-            --notice-bg: #2d2d1e;
-            --notice-border: #ffb300;
-            --nav-bg: #1e293b;
-            --nav-text: #cbd5e1;
-            --nav-active: #3b82f6;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
@@ -51,107 +29,15 @@
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
-            transition: background-color 0.3s, color 0.3s;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background: var(--card-bg);
             border-radius: 12px;
             box-shadow: var(--shadow);
             overflow: hidden;
-            position: relative;
-        }
-        
-        .theme-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 10;
-        }
-        
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .slider {
-            background-color: #6e8efb;
-        }
-        
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        
-        nav {
-            background-color: var(--nav-bg);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .logo {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--nav-active);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            color: var(--nav-text);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            background-color: var(--hover-bg, #f0f0f0);
-        }
-        
-        .nav-links a.active {
-            background-color: var(--nav-active);
-            color: white;
         }
         
         header {
@@ -169,6 +55,24 @@
         .subtitle {
             font-size: 1.1rem;
             opacity: 0.9;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--item-border);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: var(--item-border);
+            color: white;
         }
         
         .credits-container {
@@ -193,11 +97,6 @@
             padding: 15px;
             margin-bottom: 15px;
             border-left: 4px solid var(--item-border);
-            transition: transform 0.2s ease;
-        }
-        
-        .credit-item:hover {
-            transform: translateY(-2px);
         }
         
         .credit-item h3 {
@@ -210,26 +109,6 @@
             opacity: 0.8;
         }
         
-        .edit-notice {
-            background: var(--notice-bg);
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 30px;
-            border-left: 4px solid var(--notice-border);
-        }
-        
-        .edit-notice h3 {
-            color: #e65100;
-            margin-bottom: 10px;
-        }
-        
-        .edit-notice code {
-            background: #f1f1f1;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: monospace;
-        }
-        
         footer {
             text-align: center;
             padding: 20px;
@@ -238,15 +117,10 @@
             border-top: 1px solid var(--section-border);
         }
         
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 0;
+                box-shadow: none;
             }
             
             h1 {
@@ -257,36 +131,13 @@
                 padding: 20px;
             }
         }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
     </style>
 </head>
-<body>
+<body class="dark-mode">
     <div class="container">
-        <div class="theme-switch">
-            <label class="switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider"></span>
-            </label>
-        </div>
-        
-        <nav>
-            <div class="logo">Express on Vercel</div>
-            <div class="nav-links">
-                <a href="#" onclick="showPage('home')">Home</a>
-                <a href="#" onclick="showPage('about')">About</a>
-                <a href="#" onclick="showPage('api')">API Data</a>
-                <a href="#" onclick="showPage('health')">Health</a>
-                <a href="#" class="active" onclick="showPage('credits')">Credits</a>
-            </div>
-        </nav>
+        <a href="/" class="back-button">
+            &larr; Back to Home
+        </a>
         
         <header>
             <h1>Project Credits</h1>
@@ -294,50 +145,19 @@
         </header>
         
         <div class="credits-container">
-            <section class="credit-section fade-in">
+            <section class="credit-section">
                 <h2>Development Team</h2>
                 
                 <div class="credit-item">
-                    <h3>Phermacy.cxm</h3>
-                    <p>Lead Developer - Project architecture and backend development</p>
-                </div>
-                
-                <div class="credit-item">
-                    <h3>Sarah Johnson</h3>
-                    <p>Frontend Developer - UI/UX design and implementation</p>
-                </div>
-                
-                <div class="credit-item">
-                    <h3>Michael Chen</h3>
-                    <p>Database Architect - Database design and optimization</p>
-                </div>
-            </section>
-            
-            <section class="credit-section fade-in">
-                <h2>Design & Assets</h2>
-                
-                <div class="credit-item">
-                    <h3>Emily Rodriguez</h3>
-                    <p>Graphic Designer - Created all custom illustrations and icons</p>
-                </div>
-                
-                <div class="credit-item">
-                    <h3>Unsplash</h3>
-                    <p>Provided stock photography used throughout the project</p>
-                </div>
-                
-                <div class="credit-item">
-                    <h3>Google Fonts</h3>
-                    <p>Provided the typography used in this project</p>
-                </div>
-            </section>
-            
-            <section class="credit-section fade-in">
+                    <h3>Lead Devs</h3>
+                    <p>Phermacy</p>
+                </div>            
+            <section class="credit-section">
                 <h2>Special Thanks</h2>
                 
                 <div class="credit-item">
                     <h3>Beta Testers</h3>
-                    <p>semi.cxm</p>
+                    <p>Semi.cxm</p>
                 </div>
                 
                 <div class="credit-item">
@@ -345,46 +165,16 @@
                     <p>For the countless libraries and tools that made development possible</p>
                 </div>
             </section>
-            
-            <div class="edit-notice fade-in">
-                <h3>How to Edit These Credits</h3>
-                <p>This page is designed to be easily editable. Simply open the HTML file in a text editor and look for the credit sections. Each credit is contained within a <code>&lt;div class="credit-item"&gt;</code> element.</p>
-                <p>To add a new credit, copy an existing credit-item div and modify the text inside. To add a new section, copy one of the credit-section elements.</p>
-            </div>
         </div>
         
         <footer>
-            <p>Last updated: June 2023 | Express on Vercel</p>
+            <p>Last updated: Septemeber 17th 2025</p>
         </footer>
     </div>
 
     <script>
-        // Theme toggle functionality
-        const toggle = document.getElementById('theme-toggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Set initial theme based on system preference or saved preference
-        if (localStorage.getItem('theme') === 'dark' || 
-            (prefersDarkScheme.matches && !localStorage.getItem('theme'))) {
-            document.body.classList.add('dark-mode');
-            toggle.checked = true;
-        }
-        
-        // Toggle theme when switch is clicked
-        toggle.addEventListener('change', function() {
-            if (this.checked) {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
-        // Simple page navigation simulation
-        function showPage(page) {
-            alert(`This would navigate to ${page} page in a real application`);
-        }
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
     </script>
 </body>
 </html>
